@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olho na Gota - Protótipo</title>
+  <title>Water Watch - Prototype</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Estilos personalizados */
+    /* Custom styles */
     .mockup-phone {
       border: 12px solid #2b6cb0;
       border-radius: 30px;
@@ -31,45 +31,45 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
   <div class="text-center">
-    <h1 class="text-3xl font-bold text-blue-800 mb-8">Olho na Gota 💧</h1>
-    <p class="mb-8 text-gray-700">Monitoramento inteligente de consumo de água</p>
+    <h1 class="text-3xl font-bold text-blue-800 mb-8">Water Watch 💧</h1>
+    <p class="mb-8 text-gray-700">Smart water consumption monitoring</p>
 
-    <!-- Mockup do Aplicativo -->
+    <!-- App Mockup -->
     <div class="mockup-phone mx-auto">
       <div class="screen p-4">
-        <!-- Tela 1: Dashboard Principal -->
+        <!-- Screen 1: Main Dashboard -->
         <div id="screen-dashboard">
           <div class="flex justify-between items-center mb-4">
             <h2 class="text-xl font-bold text-blue-800">Dashboard</h2>
-            <img src="https://placehold.co/50x50" alt="Ícone de usuário com avatar neutro" 
+            <img src="https://placehold.co/50x50" alt="Neutral user avatar icon" 
                  class="rounded-full border-2 border-blue-200">
           </div>
 
-          <!-- Card de Consumo -->
+          <!-- Consumption Card -->
           <div class="bg-blue-50 rounded-lg p-4 mb-4">
             <div class="flex items-center justify-between mb-2">
-              <h3 class="font-semibold text-blue-800">Consumo Hoje</h3>
-              <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Alerta Moderado</span>
+              <h3 class="font-semibold text-blue-800">Today's Consumption</h3>
+              <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Moderate Alert</span>
             </div>
             <div class="flex items-center justify-around">
-              <img src="https://placehold.co/80x80" alt="Gráfico de barras mostrando consumo de água ao longo do dia com picos às 10h e 12h" 
+              <img src="https://placehold.co/80x80" alt="Bar chart showing water consumption throughout the day with peaks at 10 AM and 12 PM" 
                    class="w-20 h-20">
               <div class="text-center">
                 <p class="text-3xl font-bold text-blue-800">42L</p>
-                <p class="text-sm text-gray-600">+15% vs média</p>
+                <p class="text-sm text-gray-600">+15% vs average</p>
               </div>
             </div>
           </div>
 
-          <!-- Sensores Ativos -->
+          <!-- Active Sensors -->
           <div class="mb-4">
-            <h3 class="font-semibold text-blue-800 mb-2">Sensores Ativos</h3>
+            <h3 class="font-semibold text-blue-800 mb-2">Active Sensors</h3>
             <div class="grid grid-cols-2 gap-2">
               <div class="bg-white rounded-lg p-2 shadow-sm">
                 <div class="flex items-center">
-                  <img src="https://placehold.co/30x30" alt="Ícone de torneira com gota d'água" 
+                  <img src="https://placehold.co/30x30" alt="Faucet icon with water drop" 
                        class="mr-2 water-drop">
-                  <span>Banheiro A</span>
+                  <span>Bathroom A</span>
                 </div>
                 <div class="h-1 bg-gray-200 mt-1">
                   <div class="h-1 bg-green-500 w-3/4"></div>
@@ -77,9 +77,9 @@
               </div>
               <div class="bg-white rounded-lg p-2 shadow-sm">
                 <div class="flex items-center">
-                  <img src="https://placehold.co/30x30" alt="Ícone de torneira com vazamento vermelho" 
+                  <img src="https://placehold.co/30x30" alt="Faucet icon with red leak warning" 
                        class="mr-2 water-drop">
-                  <span>Banheiro B</span>
+                  <span>Bathroom B</span>
                 </div>
                 <div class="h-1 bg-gray-200 mt-1">
                   <div class="h-1 bg-red-500 w-full"></div>
@@ -88,105 +88,105 @@
             </div>
           </div>
 
-          <!-- Botões de Ação -->
+          <!-- Action Buttons -->
           <div class="fixed bottom-4 left-0 right-0 px-4">
             <button onclick="showScreen('alerts')" 
                     class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold mb-2">
-              Alertas (2)
+              Alerts (2)
             </button>
             <button onclick="showScreen('education')" 
                     class="w-full bg-white text-blue-600 border border-blue-600 py-3 rounded-lg font-bold">
-              Educação
+              Education
             </button>
           </div>
         </div>
 
-        <!-- Tela 2: Alertas de Vazamento -->
+        <!-- Screen 2: Leak Alerts -->
         <div id="screen-alerts" class="hidden">
           <div class="flex items-center mb-4">
             <button onclick="showScreen('dashboard')" class="text-blue-600">
-              ← Voltar
+              ← Back
             </button>
-            <h2 class="text-xl font-bold text-blue-800 ml-2">Alertas</h2>
+            <h2 class="text-xl font-bold text-blue-800 ml-2">Alerts</h2>
           </div>
 
-          <!-- Lista de Alertas -->
+          <!-- Alerts List -->
           <div class="space-y-3">
             <div class="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg">
               <div class="flex justify-between">
-                <h3 class="font-semibold text-red-800">Vazamento Detectado!</h3>
+                <h3 class="font-semibold text-red-800">Leak Detected!</h3>
                 <span class="text-xs text-gray-500">10:45 AM</span>
               </div>
-              <p class="text-sm">Banheiro feminino - Torneira da pia</p>
-              <p class="text-xs mt-1">Estimativa de perda: ~2L/hora</p>
+              <p class="text-sm">Women's bathroom - Sink faucet</p>
+              <p class="text-xs mt-1">Estimated loss: ~2L/hour</p>
             </div>
             <div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 rounded-r-lg">
               <div class="flex justify-between">
-                <h3 class="font-semibold text-yellow-800">Consumo Alto</h3>
+                <h3 class="font-semibold text-yellow-800">High Consumption</h3>
                 <span class="text-xs text-gray-500">09:30 AM</span>
               </div>
-              <p class="text-sm">Banheiro masculino - Mictório</p>
-              <p class="text-xs mt-1">15% acima da média</p>
+              <p class="text-sm">Men's bathroom - Urinal</p>
+              <p class="text-xs mt-1">15% above average</p>
             </div>
           </div>
         </div>
 
-        <!-- Tela 3: Educação -->
+        <!-- Screen 3: Education -->
         <div id="screen-education" class="hidden">
           <div class="flex items-center mb-4">
             <button onclick="showScreen('dashboard')" class="text-blue-600">
-              ← Voltar
+              ← Back
             </button>
-            <h2 class="text-xl font-bold text-blue-800 ml-2">Educação</h2>
+            <h2 class="text-xl font-bold text-blue-800 ml-2">Education</h2>
           </div>
 
           <div class="bg-white rounded-lg overflow-hidden shadow-sm mb-3">
-            <img src="https://placehold.co/600x200" alt="Infográfico mostrando que um vazamento de 1 gota por segundo pode desperdiçar até 5 mil litros por ano" 
+            <img src="https://placehold.co/600x200" alt="Infographic showing that 1 drop per second leak can waste up to 5,000 liters per year" 
                  class="w-full">
             <div class="p-3">
-              <h3 class="font-semibold text-blue-800">Sabia que...</h3>
-              <p class="text-sm text-gray-700">Uma torneira gotejando desperdiça até 46 litros por dia?</p>
+              <h3 class="font-semibold text-blue-800">Did you know...</h3>
+              <p class="text-sm text-gray-700">A dripping faucet wastes up to 46 liters per day?</p>
             </div>
           </div>
 
           <div class="bg-blue-50 rounded-lg p-3">
-            <h3 class="font-semibold text-blue-800 mb-2">Dicas para economizar</h3>
+            <h3 class="font-semibold text-blue-800 mb-2">Water-saving tips</h3>
             <ul class="text-sm space-y-2">
-              <li>• Feche bem as torneiras após o uso</li>
-              <li>• Avise a equipe sobre vazamentos</li>
-              <li>• Reduza o tempo no banho</li>
+              <li>• Close faucets properly after use</li>
+              <li>• Report leaks to maintenance staff</li>
+              <li>• Reduce shower time</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Descrição das Funcionalidades -->
+    <!-- Features Description -->
     <div class="max-w-md mx-auto mt-8 text-left bg-white p-6 rounded-lg shadow">
-      <h2 class="text-xl font-bold text-blue-800 mb-4">Funcionalidades Principais</h2>
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Main Features</h2>
       <ul class="space-y-3">
         <li>
-          <strong>📊 Monitoramento em Tempo Real:</strong>
-          <p class="text-sm">Sensores IoT enviam dados de consumo para o app a cada 5 minutos.</p>
+          <strong>📊 Real-time Monitoring:</strong>
+          <p class="text-sm">IoT sensors send consumption data to the app every 5 minutes.</p>
         </li>
         <li>
-          <strong>⚠️ Alertas Inteligentes:</strong>
-          <p class="text-sm">Notificações imediatas quando detecta vazamentos ou consumo anormal.</p>
+          <strong>⚠️ Smart Alerts:</strong>
+          <p class="text-sm">Immediate notifications when leaks or abnormal consumption are detected.</p>
         </li>
         <li>
-          <strong>📚 Conteúdo Educativo:</strong>
-          <p class="text-sm">Seção com dicas de economia de água para conscientização.</p>
+          <strong>📚 Educational Content:</strong>
+          <p class="text-sm">Section with water-saving tips for awareness.</p>
         </li>
         <li>
-          <strong>📈 Histórico e Relatórios:</strong>
-          <p class="text-sm">Gráficos mensais comparativos para identificar padrões de desperdício.</p>
+          <strong>📈 History & Reports:</strong>
+          <p class="text-sm">Monthly comparative charts to identify waste patterns.</p>
         </li>
       </ul>
     </div>
   </div>
 
   <script>
-    // Troca entre telas
+    // Screen switching
     function showScreen(screenId) {
       document.querySelectorAll('[id^="screen-"]').forEach(screen => {
         screen.classList.add('hidden');
