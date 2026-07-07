@@ -16,29 +16,29 @@
       background: white;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-    .screen {
+    .tela {
       width: 100%;
       height: 100%;
       overflow-y: auto;
     }
-    .water-drop {
+    .gota-agua {
       transition: transform 0.3s;
     }
-    .water-drop:hover {
+    .gota-agua:hover {
       transform: scale(1.1);
     }
   </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
   <div class="text-center">
-    <h1 class="text-3xl font-bold text-blue-800 mb-8">Water Watch 💧</h1>
+    <h1 class="text-3xl font-bold text-blue-800 mb-8">Olho na Gota 💧</h1>
     <p class="mb-8 text-gray-700">Monitoramento inteligente do consumo de água</p>
 
     <!-- Mockup do Aplicativo -->
     <div class="mockup-phone mx-auto">
-      <div class="screen p-4">
+      <div class="tela p-4">
         <!-- Tela 1: Painel Principal -->
-        <div id="screen-dashboard">
+        <div id="tela-painel">
           <div class="flex justify-between items-center mb-4">
             <h2 class="text-xl font-bold text-blue-800">Painel</h2>
             <img src="https://placehold.co/50x50" alt="Ícone neutro de avatar do usuário"
@@ -68,7 +68,7 @@
               <div class="bg-white rounded-lg p-2 shadow-sm">
                 <div class="flex items-center">
                   <img src="https://placehold.co/30x30" alt="Ícone de torneira com gota de água"
-                       class="mr-2 water-drop">
+                       class="mr-2 gota-agua">
                   <span>Banheiro A</span>
                 </div>
                 <div class="h-1 bg-gray-200 mt-1">
@@ -78,7 +78,7 @@
               <div class="bg-white rounded-lg p-2 shadow-sm">
                 <div class="flex items-center">
                   <img src="https://placehold.co/30x30" alt="Ícone de torneira com alerta vermelho de vazamento"
-                       class="mr-2 water-drop">
+                       class="mr-2 gota-agua">
                   <span>Banheiro B</span>
                 </div>
                 <div class="h-1 bg-gray-200 mt-1">
@@ -90,11 +90,11 @@
 
           <!-- Botões de Ação -->
           <div class="fixed bottom-4 left-0 right-0 px-4">
-            <button onclick="showScreen('alerts')"
+            <button onclick="mostrarTela('alertas')"
                     class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold mb-2">
               Alertas (2)
             </button>
-            <button onclick="showScreen('education')"
+            <button onclick="mostrarTela('educacao')"
                     class="w-full bg-white text-blue-600 border border-blue-600 py-3 rounded-lg font-bold">
               Educação
             </button>
@@ -102,9 +102,9 @@
         </div>
 
         <!-- Tela 2: Alertas de Vazamento -->
-        <div id="screen-alerts" class="hidden">
+        <div id="tela-alertas" class="hidden">
           <div class="flex items-center mb-4">
-            <button onclick="showScreen('dashboard')" class="text-blue-600">
+            <button onclick="mostrarTela('painel')" class="text-blue-600">
               ← Voltar
             </button>
             <h2 class="text-xl font-bold text-blue-800 ml-2">Alertas</h2>
@@ -132,9 +132,9 @@
         </div>
 
         <!-- Tela 3: Educação -->
-        <div id="screen-education" class="hidden">
+        <div id="tela-educacao" class="hidden">
           <div class="flex items-center mb-4">
-            <button onclick="showScreen('dashboard')" class="text-blue-600">
+            <button onclick="mostrarTela('painel')" class="text-blue-600">
               ← Voltar
             </button>
             <h2 class="text-xl font-bold text-blue-800 ml-2">Educação</h2>
@@ -187,11 +187,11 @@
 
   <script>
     // Alternância entre telas
-    function showScreen(screenId) {
-      document.querySelectorAll('[id^="screen-"]').forEach(screen => {
-        screen.classList.add('hidden');
+    function mostrarTela(telaId) {
+      document.querySelectorAll('[id^="tela-"]').forEach(tela => {
+        tela.classList.add('hidden');
       });
-      document.getElementById(`screen-${screenId}`).classList.remove('hidden');
+      document.getElementById(`tela-${telaId}`).classList.remove('hidden');
     }
   </script>
 </body>
